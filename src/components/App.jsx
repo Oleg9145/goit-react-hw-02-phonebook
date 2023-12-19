@@ -22,7 +22,7 @@ export class App extends Component {
 };
   handleAddContact = (name, number) => {
     const { contacts } = this.state;
-    if (contacts.some(contact => contact.name === name)) {
+    if (contacts.some(contact => contact.name.toUpperCase() === name.toUpperCase())) {
         alert(`${name} is already in contacts.`);
         return;
     }
